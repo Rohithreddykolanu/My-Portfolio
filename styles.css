@@ -14,6 +14,22 @@ Description: Centralized custom properties for consistent styling across the app
 --gradient-accent: linear-gradient(45deg, #e50914, #ff1f2d);
 }
 
+/* Fixed Wrapper for Consistent Width
+Ensures the content is centered and maintains a maximum width of 1024px. */
+/* This wrapper is useful for larger screens to prevent content from stretching too wide. */
+/* It also ensures that the content is centered on smaller screens. */
+.fixed-wrapper {
+width: 1024px;
+max-width: 100%;
+margin: 0 auto;
+}
+
+html, body {
+overflow-x: hidden;
+margin: 0;
+padding: 0;
+}
+
 /* Global Box Sizing Reset.
 Ensures consistent box model across all elements. */
 *, *::before, *::after {
@@ -22,16 +38,17 @@ box-sizing: border-box;
 
 /* Base Styles & Dark Mode Support
 Includes default font, smooth scrolling, and theme color transitions using CSS custom properties. */
-/* Root Theme Variables (Light Mode by Default) */
-:root {
---bg-color: #ffffff;
---text-color: #000000;
+/* Root Theme Variables (Dark Mode by Default) */
+/* Dark Mode Styles */
+body.dark-mode {
+background-color: #121212;
+color: #ffffff;
 }
 
-/* Dark Mode Variables (Overridden When .dark-mode is Applied) */
-body.dark-mode {
---bg-color: #121212;
---text-color: #f0f0f0;
+/* Light Mode (default body without class) */
+body {
+background-color: #ffffff;
+color: #000000;
 }
 
 /* Base Body Styles */

@@ -17,20 +17,34 @@ toggle.click();
 }
 });
 
-// Theme Toggle (Light/Dark Mode)
+// Theme Toggle (Dark Mode by Default)
 const toggleButton = document.getElementById('theme-toggle');
-const currentTheme = localStorage.getItem('theme');
+const savedTheme = localStorage.getItem('theme');
 
-if (currentTheme === 'dark') {
+// Apply saved theme or default to dark
+if (savedTheme === 'light') {
+document.body.classList.remove('dark-mode');
+toggleButton.textContent = '🌙 Dark Mode';
+} else {
+
+// Default to dark mode
 document.body.classList.add('dark-mode');
 toggleButton.textContent = '☀️ Light Mode';
+localStorage.setItem('theme', 'dark'); // Save default if not set
 }
 
 toggleButton.addEventListener('click', () => {
-document.body.classList.toggle('dark-mode');
-const isDark = document.body.classList.contains('dark-mode');
-toggleButton.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
-localStorage.setItem('theme', isDark ? 'dark' : 'light');
+const isCurrentlyDark = document.body.classList.contains('dark-mode');
+
+if (isCurrentlyDark) {
+document.body.classList.remove('dark-mode');
+toggleButton.textContent = '🌙 Dark Mode';
+localStorage.setItem('theme', 'light');
+} else {
+document.body.classList.add('dark-mode');
+toggleButton.textContent = '☀️ Light Mode';
+localStorage.setItem('theme', 'dark');
+}
 });
 
 // Typed.js Animation for Job Titles
