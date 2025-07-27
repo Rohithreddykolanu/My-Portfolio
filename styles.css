@@ -122,8 +122,15 @@ display: flex;
 gap: 2rem;
 }
 
-/* Mobile view: hide navigation links */
+/*Mobile Navigation */
+.nav-links li {
+position: relative;
+}
+
 @media (max-width: 768px) {
+.hamburger {
+display: block;
+}
 .nav-links {
 display: none;
 }
