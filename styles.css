@@ -22,6 +22,7 @@ Ensures the content is centered and maintains a maximum width of 1024px. */
 width: 1024px;
 max-width: 100%;
 margin: 0 auto;
+padding: 0 20px;
 }
 
 html, body {
@@ -68,72 +69,56 @@ transition: background-color 0.3s, color 0.3s;
 }
 
 /* Hero Section Styling */
-hero {
+.hero {
 background-color: var(--bg-color);
 color: var(--text-color);
 }
 
-/* Header & Navigation Bar*/
+.hero .fixed-wrapper {
+padding: 60px 0;
+}
+
+/* Header & Navigation Bar */
 header {
-background: var(--bg-white); /* same as .section */
+background: var(--bg-white);
 position: sticky;
 top: 0;
 z-index: 999;
-box-shadow: var(--shadow); /* already present */
-border-radius: var(--radius); /* match .section */
-margin: 40px; /* same horizontal & top spacing */
-padding: 20px; /* same as .section */
-transition: var(--transition); /* smooth transform if needed */
+box-shadow: var(--shadow);
+border-radius: var(--radius);
+margin: 40px;
+padding: 20px;
+transition: var(--transition);
 }
 
-nav {
-max-width: 1400px;
-margin: auto;
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-
-/* Header Hover Effect */
 header:hover {
 transform: scale(1.02);
 box-shadow: 0 12px 30px rgba(255, 255, 255, 0.2);
 }
 
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+/* Logo / Title */
 .logo {
 font-family: 'Garamond', serif;
 font-size: 1.5rem;
 font-weight: 700;
-color: var(--accent);
+color: var(--accent); 
 }
 
-.menu-toggle {
-display: none;
-font-size: 2rem;
-background: none;
-border: none;
-cursor: pointer;
-color: var(--accent);
-}
-
+/* Navigation Links */
 .nav-links {
 list-style: none;
 display: flex;
-gap: 2rem;
+ gap: 2rem;
 }
 
-/*Mobile Navigation */
 .nav-links li {
 position: relative;
-}
-
-@media (max-width: 768px) {
-.hamburger {
-display: block;
-}
-.nav-links {
-display: none;
-}
 }
 
 .nav-links a {
@@ -157,12 +142,29 @@ transform: scale(1.2);
 color: var(--accent);
 }
 
-/* Responsive Navigation */
-@media (max-width: 768px) {
-.menu-toggle {
-display: block;
+.theme-toggle {
+background: red;
+color: white;
+border: none;
+font-size: 1rem;
+border-radius: var(--radius);
+cursor: pointer;
+padding-left: 20px;
 }
 
+/* Hamburger Menu Button */
+.menu-toggle {
+display: none;
+font-size: 2rem;
+background: none;
+border: none;
+cursor: pointer;
+color: var(--accent);
+margin-left: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
 .nav-links {
 display: none;
 flex-direction: column;
@@ -177,6 +179,20 @@ box-shadow: var(--shadow);
 
 .nav-links.active {
 display: flex;
+}
+
+.menu-toggle {
+display: block;
+}
+
+nav {
+position: relative;
+}
+
+.nav-right {
+display: flex;
+align-items: center;
+gap: 1rem;
 }
 }
 
@@ -211,15 +227,15 @@ border-image-source: linear-gradient(135deg, #ff1f2d, #e50914);
 /* Hero */
 .hero {
 background-image: url('assets/Home Background.jpg');
-background-size: 1450px 700px;
+background-size: 1500px 700px;
 background-position: center;
 background-repeat: no-repeat;
-width: 1400px;
+width: 1430px;
 height: 600px;
 display: flex;
 flex-direction: column;
-justify-content: left;
-align-items: left;
+justify-content: flex-start;
+align-items: flex-start;
 text-align: left;
 font-family: 'Garamond', serif;
 padding: 20px;
@@ -228,7 +244,7 @@ margin: 0 auto;
 overflow: hidden;
 box-sizing: border-box;
 margin-top: 40px;
-border-radius: 20px; /* <-- Added for curvy edges */
+border-radius: 20px; 
 }
 
 .hero h1 {
@@ -466,7 +482,7 @@ font-size: 28px;
 .section-underline {
 width: 60px;
 height: 4px;
-background-color: #00b894;
+background-color: #c40000;
 border-radius: 2px;
 }
 
