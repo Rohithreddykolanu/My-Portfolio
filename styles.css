@@ -27,41 +27,12 @@ padding: 0 20px;
 box-sizing: border-box;
 }
 
-/* Make images responsive */
-img {
-max-width: 100%;
-height: auto;
-display: block;
-}
-
 /* Basic responsive layout */
 body, html {
 margin: 0;
 padding: 0;
 width: 100%;
 overflow-x: hidden;
-}
-
-/* Wrap content in a flexible container */
-.container {
-width: 100%;
-padding: 10px;
-}
-
-/* Media queries for additional responsiveness */
-@media screen and (max-width: 768px) {
-.container {
-padding: 8px;
-}
-
-h1, h2, h3 {
-font-size: 1.2em;
-}
-
-.some-class {
-flex-direction: column;
-text-align: center;
-}
 }
 
 /* Base Styles & Dark Mode Support */
