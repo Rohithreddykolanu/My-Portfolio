@@ -14,10 +14,7 @@ Description: Centralized custom properties for consistent styling across the app
 --gradient-accent: linear-gradient(45deg, #e50914, #ff1f2d);
 }
 
-/* Fixed Wrapper for Consistent Width
-Ensures the content is centered and maintains a maximum width of 1024px. */
-/* This wrapper is useful for larger screens to prevent content from stretching too wide. */
-/* It also ensures that the content is centered on smaller screens. */
+/* Fixed Wrapper for Consistent Width and Centering. */
 .fixed-wrapper {
 width: 1024px;
 max-width: 100%;
@@ -25,22 +22,49 @@ margin: 0 auto;
 padding: 0 20px;
 }
 
-html, body {
-overflow-x: hidden;
-margin: 0;
-padding: 0;
-}
-
-/* Global Box Sizing Reset.
-Ensures consistent box model across all elements. */
+/* Global Box Sizing. */
 *, *::before, *::after {
 box-sizing: border-box;
 }
 
-/* Base Styles & Dark Mode Support
-Includes default font, smooth scrolling, and theme color transitions using CSS custom properties. */
-/* Root Theme Variables (Dark Mode by Default) */
-/* Dark Mode Styles */
+/* Make images responsive */
+img {
+max-width: 100%;
+height: auto;
+display: block;
+}
+
+/* Basic responsive layout */
+body, html {
+margin: 0;
+padding: 0;
+width: 100%;
+overflow-x: hidden;
+}
+
+/* Wrap content in a flexible container */
+.container {
+width: 100%;
+padding: 10px;
+}
+
+/* Media queries for additional responsiveness */
+@media screen and (max-width: 768px) {
+.container {
+padding: 8px;
+}
+
+h1, h2, h3 {
+font-size: 1.2em;
+}
+
+.some-class {
+flex-direction: column;
+text-align: center;
+}
+}
+
+/* Base Styles & Dark Mode Support */
 body.dark-mode {
 background-color: #121212;
 color: #ffffff;
