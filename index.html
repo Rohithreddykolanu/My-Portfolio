@@ -38,41 +38,46 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 <body>
-<header>
+<main>
 <!-- Navigation Bar -->
 <nav role="navigation" aria-label="Main Navigation">
+  <!-- Desktop Navigation -->
+  <ul id="nav-links" class="nav-links desktop">
+    <li><a href="#About"><span>About</span></a></li>
+    <li><a href="#Education"><span>Education</span></a></li>
+    <li><a href="#Experience"><span>Experience</span></a></li>
+    <li><a href="#Skills"><span>Skills</span></a></li>
+    <li><a href="#Certifications"><span>Certifications</span></a></li>
+    <li><a href="#Projects"><span>Projects</span></a></li>
+    <li><a href="#Testimonials"><span>Testimonials</span></a></li>
+    <li><a href="#Contact"><span>Contact</span></a></li>
+  </ul>
 
-<!-- Logo -->
-<div class="logo">Rohith Reddy Kolanu</div>
-
-<!-- Navigation Links -->
-<ul id="nav-links" class="nav-links">
-<li><a href="#Home">Home</a></li>
-<li><a href="#About">About</a></li>
-<li><a href="#Education">Education</a></li>
-<li><a href="#Experience">Experience</a></li>
-<li><a href="#Skills">Skills</a></li>
-<li><a href="#Certifications">Certifications</a></li>
-<li><a href="#Projects">Projects</a></li>
-<li><a href="#Testimonials">Testimonials</a></li>
-<li><a href="#Contact">Contact</a></li>
-</ul>
-
-<!-- Theme Toggle Button -->
-<button id="theme-toggle">☀️ Light Mode</button>
-    
-<!-- Hamburger Menu for Mobile -->
-<button id="menu-toggle" class="menu-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+  <!-- Mobile Navigation -->
+  <ul id="nav-icons" class="nav-icons mobile">
+    <li><a href="#About"><i class="fas fa-user"></i></a></li>
+    <li><a href="#Education"><i class="fas fa-graduation-cap"></i></a></li>
+    <li><a href="#Experience"><i class="fas fa-briefcase"></i></a></li>
+    <li><a href="#Skills"><i class="fas fa-tools"></i></a></li>
+    <li><a href="#Certifications"><i class="fas fa-certificate"></i></a></li>
+    <li><a href="#Projects"><i class="fas fa-project-diagram"></i></a></li>
+    <li><a href="#Testimonials"><i class="fas fa-comment-dots"></i></a></li>
+    <li><a href="#Contact"><i class="fas fa-envelope"></i></a></li>
+  </ul>
 </nav>
-</header>
 
-
-<main>
-<!-- Home Section -->
-<section class="hero" id="home" data-aos="fade-up">
-<h1>Hey, I'm a <span id="animated-title"></span></h1>
-<p>"I bridge the gap between data and strategy—transforming raw information into actionable insights that drive smarter decisions, unlock business potential, and power long-term growth."</p>
-</section>
+<!-- Hero Section -->
+<div class="hero">
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="assets/Home Background.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div class="fixed-wrapper">
+  <h1>Hey, I'm Rohith Reddy</h1> 
+  <h2>I'm a <span id="animated-title"></span></h2>
+    <p>"I bridge the gap between data and strategy—transforming raw information into actionable insights that drive smarter decisions, unlock business potential, and power long-term growth."</p>
+  </div>
+</div>
 
 <div class="hero-buttons">
 <a href="assets/Rohith_Reddy_Kolanu_Resume.pdf" target="_blank" class="btn-gradient btn-resume">📄 Download Resume</a>

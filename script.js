@@ -1,50 +1,28 @@
+
 // AOS (Animate On Scroll) Initialization
 AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
 
-// Mobile Navigation Toggle
-const toggle = document.getElementById('menu-toggle');
-const links = document.getElementById('nav-links');
-toggle.addEventListener('click', () => {
-const expanded = toggle.getAttribute('aria-expanded') === 'true';
-toggle.setAttribute('aria-expanded', !expanded);
-links.classList.toggle('active');
-});
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll("nav a");
 
-toggle.addEventListener('keydown', (e) => {
-if (e.key === 'Enter' || e.key === ' ') {
-e.preventDefault();
-toggle.click();
-}
-});
+// Scroll-based active tracker
+window.addEventListener("scroll", () => {
+  let current = "";
 
-// Theme Toggle (Dark Mode by Default)
-const toggleButton = document.getElementById('theme-toggle');
-const savedTheme = localStorage.getItem('theme');
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    if (scrollY >= sectionTop - 60) {
+      current = section.getAttribute("id");
+    }
+  });
 
-// Apply saved theme or default to dark
-if (savedTheme === 'light') {
-document.body.classList.remove('dark-mode');
-toggleButton.textContent = '🌙 Dark Mode';
-} else {
-
-// Default to dark mode
-document.body.classList.add('dark-mode');
-toggleButton.textContent = '☀️ Light Mode';
-localStorage.setItem('theme', 'dark'); // Save default if not set
-}
-
-toggleButton.addEventListener('click', () => {
-const isCurrentlyDark = document.body.classList.contains('dark-mode');
-
-if (isCurrentlyDark) {
-document.body.classList.remove('dark-mode');
-toggleButton.textContent = '🌙 Dark Mode';
-localStorage.setItem('theme', 'light');
-} else {
-document.body.classList.add('dark-mode');
-toggleButton.textContent = '☀️ Light Mode';
-localStorage.setItem('theme', 'dark');
-}
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
 });
 
 // Typed.js Animation for Job Titles
@@ -54,7 +32,7 @@ strings: [
 'Financial Analyst',
 'Data Analyst',
 'Product Analyst',
-'Associate Consultant'
+'Associate'
 ],
 typeSpeed: 60,
 backSpeed: 30,
