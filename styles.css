@@ -58,9 +58,9 @@ nav {
   align-items: center;
 
   position: fixed;
-  top: 30px; /* Space above the navbar */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Center alignment fix */
+  top: 20px;
+  left: 50%; 
+  transform: translateX(-50%); 
 
   width: fit-content; 
   z-index: 1000;
@@ -161,7 +161,7 @@ nav ul {
   padding: 20px;
   color: #ffffff;
   margin: 20px auto 0 auto;
-  margin-top: 120px;
+  margin-top: 100px;
   overflow: hidden;
   box-sizing: border-box;
   border-radius: 20px;
@@ -238,7 +238,6 @@ border-radius: 50px;
 color: #fff;
 text-decoration: none;
 background: linear-gradient(135deg, var(--accent), var(--accent));
-box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 transition: background 0.3s ease, transform 0.3s ease;
 }
 
