@@ -16,12 +16,6 @@ The portfolio is divided into the following **core sections**, each with its uni
 
 ## 🧭 Sections Included
 
-### 🏠 Home
-- Serves as the landing section.
-- Features a brief self-introduction.
-- Includes a visually appealing background and welcoming text.
-- Navigation bar is accessible here for moving between sections.
-
 ### 👤 About
 - Highlights who I am as a person and a professional.
 - Includes a personal photograph or avatar.
@@ -62,10 +56,6 @@ The portfolio is divided into the following **core sections**, each with its uni
 ## ✨ Features Included
 
 The site incorporates several JavaScript-powered interactive features for better usability and modern user experience:
-
-### 🌗 Light Mode / Dark Mode Toggle
-- Allows the user to switch between light and dark themes for visual comfort.
-- Toggle switch remembers the user's preference using local storage or similar method.
 
 ### 🔝 Back to Top Button
 - A button that appears when the user scrolls down.
