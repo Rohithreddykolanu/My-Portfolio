@@ -1,4 +1,3 @@
-
 // AOS (Animate On Scroll) Initialization
 AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
 
@@ -7,32 +6,33 @@ const navLinks = document.querySelectorAll("nav a");
 
 // Scroll-based active tracker
 window.addEventListener("scroll", () => {
-  let current = "";
+let current = "";
 
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-    if (scrollY >= sectionTop - 60) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === "#" + current) {
-      link.classList.add("active");
-    }
-  });
+sections.forEach(section => {
+const sectionTop = section.offsetTop;
+const sectionHeight = section.offsetHeight;
+if (scrollY >= sectionTop - 60) {
+current = section.getAttribute("id");
+}
 });
 
+navLinks.forEach(link => {
+link.classList.remove("active");
+if (link.getAttribute("href") === "#" + current) {
+link.classList.add("active");
+}
+});
+});
+
+
+// Hero Section
 // Typed.js Animation for Job Titles
 var typed = new Typed('#animated-title', {
 strings: [
 'Business Analyst',
 'Financial Analyst',
 'Data Analyst',
-'Product Analyst',
-'Associate'
+'Product Analyst'
 ],
 typeSpeed: 60,
 backSpeed: 30,
@@ -40,6 +40,20 @@ backDelay: 3000,
 loop: true
 });
 
+
+// Skills Section
+// Skills Carousel Functionality
+function scrollCarousel(direction) {
+const carousel = document.querySelector('.skills-carousel');
+const cardWidth = carousel.querySelector('.skill-card').offsetWidth + 30; // card + gap
+carousel.scrollBy({
+left: direction * cardWidth * 1.05, // scroll by 1 card width
+behavior: 'smooth'
+});
+}
+
+
+// Testimonials Section
 // Read More / Read Less Toggle
 function toggleReadMore(button) {
 const fullText = button.previousElementSibling;
@@ -56,6 +70,8 @@ button.textContent = "Read Less";
 }
 }
 
+
+// Contact Section
 // Contact Form Submission Handler
 document.getElementById('contact-form').addEventListener('submit', function (e) {
 e.preventDefault();
