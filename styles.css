@@ -630,7 +630,7 @@ display: none;
 }
 
 .skill-card {
-flex: 0 0 calc(25% - 25px);
+flex: 0 0 calc(25% - 22px);
 background-color: #1f1f1f;
 border-radius: 10px;
 padding: 20px 20px; 
