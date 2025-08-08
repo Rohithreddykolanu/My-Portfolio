@@ -67,7 +67,7 @@ dotsContainer.appendChild(dot);
 
 function scrollToPage(pageIndex) {
 const cardsPerPage = getCardsPerPage();
-const cardWidth = carousel.querySelector('.skill-card').offsetWidth + 30;
+const cardWidth = carousel.querySelector('.skill-card');
 carousel.scrollTo({
 left: pageIndex * cardsPerPage * cardWidth,
 behavior: 'smooth'
