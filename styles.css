@@ -590,8 +590,8 @@ background-color: #444;
 background: var(--bg-white);
 border-radius: var(--radius);
 box-shadow: var(--shadow);
-padding: 40px;
-margin: 40px;
+padding: 20px;
+margin: 20px;
 transition: var(--transition);
 }
 
@@ -623,21 +623,21 @@ gap: 30px;
 overflow-x: auto;
 scroll-behavior: smooth;
 padding: 20px;
-scrollbar-width: none; /* hide scrollbar on Firefox */
+scrollbar-width: none;
 }
 
 .skills-carousel::-webkit-scrollbar {
-display: none; /* hide scrollbar on Chrome/Safari */
+display: none;
 }
 
 .skill-card {
-flex: 0 0 calc(25% - 22.5px); /* 4 cards per row (100% / 4 - gap) */
+flex: 0 0 calc(25% - 25px); 
 background-color: #1f1f1f;
 border-radius: 20px;
-padding: 20px;
+padding: 10px;
 color: white;
 transition: transform 0.3s ease;
-min-width: 250px;
+min-width: 300px;
 }
 
 .card:hover,
@@ -646,34 +646,25 @@ transform: scale(1.02);
 box-shadow: 0 12px 30px #ffffff33;
 }
 
-.carousel-btn {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-background: #ff0000;
-color: white;
-border: none;
-padding: 13px 13px;
-font-size: 15px;
-cursor: pointer;
-border-radius: 50%;
-z-index: 10;
+.carousel-dots {
+display: flex;
+justify-content: center;
+gap: 10px;
+margin-top: 15px;
 }
 
-.left-btn {
-left: 0.5px;
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #ff0000;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.left-btn:hover {
-background: linear-gradient(135deg, #8b0000);
-}
-
-.right-btn {
-right: 0.5px;
-}
-
-.right-btn:hover {
-background: linear-gradient(135deg, #8b0000);
+.carousel-dot.active {
+  background: #ff0000;
 }
 
 @media (max-width: 768px) {
