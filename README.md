@@ -29,6 +29,10 @@ The portfolio is divided into the following **core sections**, each with its uni
 - Lists past job roles, internships, or relevant academic experiences.
 - Each item includes the organization name, position title, duration, and key responsibilities or accomplishments.
 
+### 🚀 Projects
+- Showcases a curated list of personal or academic projects.
+- Each project includes a title, short description, technologies used, and links to live demos or GitHub repositories (if available).
+
 ### 🛠️ Skills
 - Lists technical skills (e.g., tools, programming languages, technologies).
 - Uses visual indicators like progress bars, icons, or lists to display skill levels or proficiency.
@@ -36,10 +40,6 @@ The portfolio is divided into the following **core sections**, each with its uni
 ### 📜 Certifications
 - Highlights key certifications I have completed.
 - Displays certificate names, issuing organizations, and completion dates.
-
-### 🚀 Projects
-- Showcases a curated list of personal or academic projects.
-- Each project includes a title, short description, technologies used, and links to live demos or GitHub repositories (if available).
 
 ### 🗣️ Testimonials
 - Displays feedback or endorsements from colleagues, professors, or professionals.
