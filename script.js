@@ -115,25 +115,34 @@ button.textContent = "Read Less";
 
 // Contact Section
 // Contact Form Submission Handler
-document.getElementById('contact-form').addEventListener('submit', function (e) {
-e.preventDefault();
-document.getElementById('form-status').textContent = "Thanks for reaching out! I’ll reply soon.";
-this.reset();
-});
-
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
 
-form.addEventListener('submit', function (e) {
-e.preventDefault();
+async function handleSubmit(event) {
+event.preventDefault();
+const data = new FormData(event.target);
+status.textContent = "Sending...";
+  
+fetch(event.target.action, {
+method: form.method,
+body: data,
+headers: {
+'Accept': 'application/json'
+}
+}).then(response => {
+if (response.ok) {
 status.textContent = "Thanks for reaching out! I’ll reply soon.";
-form.querySelector('button').disabled = true;
-
-setTimeout(() => {
 form.reset();
-form.querySelector('button').disabled = false;
-}, 2000);
+} else {
+status.textContent = "Oops! There was a problem submitting your form.";
+}
+}).catch(error => {
+status.textContent = "Oops! There was a problem submitting your form.";
 });
+}
+
+form.addEventListener('submit', handleSubmit);
+
 
 // Back to Top Button Functionality
 const backToTopBtn = document.getElementById('backToTop');
