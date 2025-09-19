@@ -51,6 +51,8 @@ nav {
 background-color: #2a2a2a;
 padding: 0.8rem 1.2rem;
 border-radius: 2rem;
+border: 2px solid #ff0000;
+box-shadow: 0 0 12px #8b0000;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -63,11 +65,12 @@ z-index: 1000;
 }
 
 body {
-position: relative;
+position: absolute;
 }
 
 html {
 scroll-behavior: smooth;
+scroll-padding-top: 100px;
 }
 
 /* COMMON STYLE FOR BOTH ULs */
@@ -136,7 +139,6 @@ nav ul {
 gap: 0.5rem;
 }
 }
-
 
 /* Hero Section Styling */
 .hero {
