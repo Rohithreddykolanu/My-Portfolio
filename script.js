@@ -48,36 +48,36 @@ const cards = carousel.querySelectorAll('.skill-card');
 const dotsContainer = document.querySelector('.carousel-dots');
 
 function createDots() {
-  dotsContainer.innerHTML = '';
-  cards.forEach((_, i) => {
-    const dot = document.createElement('div');
-    dot.classList.add('carousel-dot');
-    if (i === 0) dot.classList.add('active');
-    dot.addEventListener('click', () => scrollToCard(i));
-    dotsContainer.appendChild(dot);
-  });
+dotsContainer.innerHTML = '';
+cards.forEach((_, i) => {
+const dot = document.createElement('div');
+dot.classList.add('carousel-dot');
+if (i === 0) dot.classList.add('active');
+dot.addEventListener('click', () => scrollToCard(i));
+dotsContainer.appendChild(dot);
+});
 }
 
 function scrollToCard(cardIndex) {
-  const cardWidth = carousel.querySelector('.skill-card').offsetWidth + 30;
-  carousel.scrollTo({
-    left: cardIndex * cardWidth,
-    behavior: 'smooth'
-  });
-  updateActiveDot(cardIndex);
+const cardWidth = carousel.querySelector('.skill-card').offsetWidth + 30;
+carousel.scrollTo({
+left: cardIndex * cardWidth,
+behavior: 'smooth'
+});
+updateActiveDot(cardIndex);
 }
 
 function updateActiveDot(index) {
-  document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
-    dot.classList.toggle('active', i === index);
-  });
+document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+dot.classList.toggle('active', i === index);
+});
 }
 
 // Track scroll (Instagram-style: update active dot as soon as the card is in view)
 carousel.addEventListener('scroll', () => {
-  const cardWidth = carousel.querySelector('.skill-card').offsetWidth + 30;
-  const index = Math.round(carousel.scrollLeft / cardWidth);
-  updateActiveDot(index);
+const cardWidth = carousel.querySelector('.skill-card').offsetWidth + 30;
+const index = Math.round(carousel.scrollLeft / cardWidth);
+updateActiveDot(index);
 });
 
 window.addEventListener('resize', createDots);
