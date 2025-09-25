@@ -47,46 +47,37 @@ const carousel = document.querySelector('.skills-carousel');
 const cards = carousel.querySelectorAll('.skill-card');
 const dotsContainer = document.querySelector('.carousel-dots');
 
-function getCardsPerPage() {
-return window.innerWidth <= 768 ? 1 : 4; // Mobile = 1, Desktop = 4
-}
-
 function createDots() {
-dotsContainer.innerHTML = '';
-const cardsPerPage = getCardsPerPage();
-const totalDots = Math.ceil(cards.length / cardsPerPage);
-
-for (let i = 0; i < totalDots; i++) {
-const dot = document.createElement('div');
-dot.classList.add('carousel-dot');
-if (i === 0) dot.classList.add('active');
-dot.addEventListener('click', () => scrollToPage(i));
-dotsContainer.appendChild(dot);
-}
+  dotsContainer.innerHTML = '';
+  cards.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.classList.add('carousel-dot');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => scrollToCard(i));
+    dotsContainer.appendChild(dot);
+  });
 }
 
-function scrollToPage(pageIndex) {
-const cardsPerPage = getCardsPerPage();
-const cardWidth = carousel.querySelector('.skill-card').offsetWidth + 30;
-carousel.scrollTo({
-left: pageIndex * cardsPerPage * cardWidth,
-behavior: 'smooth'
-});
-updateActiveDot(pageIndex);
+function scrollToCard(cardIndex) {
+  const cardWidth = carousel.querySelector('.skill-card').offsetWidth + 30;
+  carousel.scrollTo({
+    left: cardIndex * cardWidth,
+    behavior: 'smooth'
+  });
+  updateActiveDot(cardIndex);
 }
 
 function updateActiveDot(index) {
-document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
-dot.classList.toggle('active', i === index);
-});
+  document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
 }
 
-// Track scroll to update active dot
+// Track scroll (Instagram-style: update active dot as soon as the card is in view)
 carousel.addEventListener('scroll', () => {
-const cardWidth = carousel.querySelector('.skill-card').offsetWidth + 30;
-const cardsPerPage = getCardsPerPage();
-const index = Math.round(carousel.scrollLeft / (cardsPerPage * cardWidth));
-updateActiveDot(index);
+  const cardWidth = carousel.querySelector('.skill-card').offsetWidth + 30;
+  const index = Math.round(carousel.scrollLeft / cardWidth);
+  updateActiveDot(index);
 });
 
 window.addEventListener('resize', createDots);

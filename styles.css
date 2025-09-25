@@ -648,22 +648,23 @@ box-shadow: 0 12px 30px #ffffff33;
 .carousel-dots {
 display: flex;
 justify-content: center;
-gap: 10px;
-margin-top: 15px;
+gap: 6px;
+margin-top: 12px;
 }
 
 .carousel-dot {
-width: 12px;
-height: 12px;
+width: 8px;
+height: 8px;
+background: #ff0000;
 border-radius: 50%;
-border: 2px solid #ff0000;
-background: transparent;
+transition: all 0.3s ease;
 cursor: pointer;
-transition: background 0.3s ease;
 }
 
 .carousel-dot.active {
+width: 18px;
 background: #ff0000;
+border-radius: 10px;
 }
 
 @media (max-width: 768px) {
