@@ -198,7 +198,7 @@ color: #ffffff;
 @media (max-width: 768px) {
 .hero {
 max-width: 90%;
-margin-top: 90px;
+margin-top: 80px;
 height: auto;
 padding: 10px;
 border-radius: var(--radius);
