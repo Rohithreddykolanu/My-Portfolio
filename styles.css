@@ -650,23 +650,28 @@ box-shadow: 0 12px 30px #ffffff33;
 .carousel-dots {
 display: flex;
 justify-content: center;
-gap: 6px;
-margin-top: 12px;
+gap: 8px;
+margin-top: 15px;
 }
 
 .carousel-dot {
-width: 8px;
-height: 8px;
-background: #ff0000;
+width: 10px;
+height: 10px;
+border: 2px solid #ff0000; 
 border-radius: 50%;
-transition: all 0.3s ease;
+background-color: transparent;
 cursor: pointer;
+transition: all 0.3s ease;
 }
 
 .carousel-dot.active {
-width: 18px;
-background: #ff0000;
-border-radius: 10px;
+background-color: #ff0000; 
+transform: scale(1.1);
+}
+
+.carousel-dot:hover {
+transform: scale(1.2);
+opacity: 0.8;
 }
 
 @media (max-width: 768px) {
