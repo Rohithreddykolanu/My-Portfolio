@@ -29,10 +29,10 @@ link.classList.add("active");
 // Typed.js Animation for Job Titles
 var typed = new Typed('#animated-title', {
 strings: [
-'Business Analyst',
-'Financial Analyst',
+'Data Scientist',
 'Data Analyst',
-'Product Analyst'
+'Business Analyst',
+'Financial Analyst'
 ],
 typeSpeed: 60,
 backSpeed: 30,
