@@ -31,10 +31,9 @@ var typed = new Typed('#animated-title', {
 strings: [
 'Data Scientist',
 'Data Analyst',
-'Business Analyst',
-'Financial Analyst'
+'Business Analyst'
 ],
-typeSpeed: 60,
+typeSpeed: 70,
 backSpeed: 30,
 backDelay: 3000,
 loop: true
