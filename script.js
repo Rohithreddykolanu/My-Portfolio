@@ -85,6 +85,22 @@ window.addEventListener('resize', createDots);
 createDots();
 
 
+// Certifications Section
+const toggleBtn = document.getElementById("certificationsToggle");
+const container = document.getElementById("certifications-container");
+
+toggleBtn.addEventListener("click", () => {
+container.classList.toggle("expanded");
+
+if (container.classList.contains("expanded")) {
+toggleBtn.textContent = "View Less";
+} else {
+toggleBtn.textContent = "View More";
+container.scrollIntoView({ behavior: "smooth" });
+}
+});
+
+
 // Testimonials Section
 // Read More / Read Less Toggle
 function toggleReadMore(button) {

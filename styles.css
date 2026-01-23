@@ -737,6 +737,39 @@ flex: 1 1 55%;
 }
 }
 
+/* Hide cards beyond the first 5 */
+#certifications-container .certification-card {
+display: none;
+}
+
+/* Show first 5 cards */
+#certifications-container .certification-card:nth-child(-n+5) {
+display: flex;
+}
+
+/* Expanded state: show all */
+#certifications-container.expanded .certification-card {
+display: flex;
+}
+
+/* Toggle button (matches your theme) */
+.toggle-btn {
+padding: 10px 28px;
+background-color: #ff0000;
+color: #fff;
+border: none;
+border-radius: 30px;
+font-weight: 600;
+font-size: 15px;
+cursor: pointer;
+transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+background-color: #8b0000;
+transform: translateY(-2px);
+}
+
 
 /* ==============================
    Testimonials Section
