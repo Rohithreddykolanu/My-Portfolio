@@ -257,6 +257,96 @@ Hybrid – Hyderabad, India
 <h2><i class="fa-solid fa-project-diagram"></i> Projects</h2>
 <div class="project-grid">
 
+<!-- Card 10: ReneWind_Optimizing Wind Turbine Maintenance Costs Through Neural Network-Based Failure Prediction -->
+<div class="project-card">
+<div class="project-content">
+<h3 style="color: #ff0000;">ReneWind_Optimizing Wind Turbine Maintenance Costs Through Neural Network-Based Failure Prediction</h3>
+<ul>
+<li>Built a neural network classifier for ReneWind on 20,000 training and 5,000 test records across 40 sensor predictors, predicting turbine generator failures within a roughly 17 to 1 class imbalance to enable predictive maintenance and lower operating cost.</li>
+<li>Engineered a clean pipeline in Python with scikit-learn and TensorFlow, imputing missing values, standardizing all 40 features, and handling the imbalance through both SMOTE oversampling and a 0.1 to 0.9 class weighting scheme for a direct comparison.</li>
+<li>Built and tuned nine Keras architectures up to 51,376 parameters, varying depth, optimizers including Adam, SGD, and RMSprop, and regularization via Dropout, Batch Normalization, L2 penalties, and Early Stopping to cut the train to validation gap.</li>
+<li>Selected the final model by sweeping decision thresholds against costs of 10 for replacement, 1 for repair, and 0.5 for inspection, reaching the lowest total cost of 506 while catching 253 of 277 validation failures with just 26 false alarms raised.</li>
+<li>Delivered a final model scoring 0.9852 accuracy, 0.9321 recall, and 0.9307 F1 on the test set, capturing 246 of 282 real failures with only 38 false alarms, prioritizing recall since each missed failure drives the most expensive replacement cost.</li>
+</ul>
+<a href="https://github.com/Rohithreddykolanu/ReneWind_Optimizing-Wind-Turbine-Maintenance-Costs-Through-Neural-Network-Based-Failure-Prediction" class="github-link" target="_blank">
+<i class="fa-brands fa-github"></i> View Project
+</a>
+</div>
+<img src="assets/Projects/Project 10.jpg" alt="Insights into Customer Shopping Behavior">
+</div>
+
+<!-- Card 9: Airbnb Price Prediction, Guest Sentiment Analysis & Topic Modeling using ML & NLP -->
+<div class="project-card">
+<div class="project-content">
+<h3 style="color: #ff0000;">Airbnb Price Prediction, Guest Sentiment Analysis & Topic Modeling using ML & NLP</h3>
+<ul>
+<li>Built an end to end analysis of the Chicago Airbnb market in Python, combining guest review text and structured listing data from Inside Airbnb to study guest experience and predict nightly listing prices across the city.</li>
+<li>Engineered an NLP pipeline on 492,465 reviews using NLTK, applying preprocessing, VADER and transformer sentiment, zero shot classification across five experience themes, and topic modeling with LDA, NMF, LSA, and BERTopic.</li>
+<li>Merged the review derived sentiment, theme, and topic features with structured listing attributes, then engineered a clean modeling set of 3,840 listings across 23 features after cleaning, outlier treatment, and encoding.</li>
+<li>Trained and compared two Keras neural networks against a tuned XGBoost regressor, selecting XGBoost as the best model with a test R² of 0.6166 and the lowest RMSE, while regularization closed the neural network overfitting gap.</li>
+<li>Identified property size as the dominant price driver alongside room type, and confirmed that review based features such as the upscale views topic add real signal, turning guest perceptions into measurable pricing insight.</li>
+</ul>
+<a href="https://github.com/Rohithreddykolanu/Airbnb-Price-Prediction-Guest-Sentiment-Analysis-Topic-Modeling-using-ML-NLP" class="github-link" target="_blank">
+<i class="fa-brands fa-github"></i> View Project
+</a>
+</div>
+<img src="assets/Projects/Project 9.jpg" alt="Insights into Customer Shopping Behavior">
+</div>
+
+<!-- Card 8: EasyVisa_Predicting Visa Approval Outcomes Using Advanced Machine Learning Techniques -->
+<div class="project-card">
+<div class="project-content">
+<h3 style="color: #ff0000;">EasyVisa_Predicting Visa Approval Outcomes Using Advanced Machine Learning Techniques</h3>
+<ul>
+<li>Built a supervised classification model for the firm EasyVisa using 25,480 US work visa applications across 12 features, predicting whether each case would be certified or denied to streamline the labor certification review process.</li>
+<li>Engineered a clean pipeline in Python with pandas, NumPy, and scikit-learn, encoding applicant and employer attributes and addressing the class imbalance through both SMOTE oversampling and random undersampling for comparison.</li>
+<li>Trained and compared a Decision Tree against bagging and boosting ensembles including Random Forest, Bagging, AdaBoost, Gradient Boosting, and XGBoost, then tuned the leading models with Grid Search and Randomized Search methods.</li>
+<li>Selected the tuned XGBoost as the final model, reaching a test F1 score of 0.8192 and a recall of 0.8731, and confirmed that oversampling generalized better than under sampling while boosting outperformed the bagging approaches.</li>
+<li>Identified education level as the most influential factor alongside job experience, wage unit, and region of employment, enabling faster shortlisting of likely approvals and more efficient allocation of manual review effort.</li>
+</ul>
+<a href="https://github.com/Rohithreddykolanu/EasyVisa_Predicting-Visa-Approval-Outcomes-Using-Advanced-Machine-Learning-Techniques-" class="github-link" target="_blank">
+<i class="fa-brands fa-github"></i> View Project
+</a>
+</div>
+<img src="assets/Projects/Project 8.jpg" alt="Insights into Customer Shopping Behavior">
+</div>
+
+<!-- Card 7: Personal Loan Acceptance Prediction for Marketing Campaign Optimization Using Supervised Learning -->
+<div class="project-card">
+<div class="project-content">
+<h3 style="color: #ff0000;">Personal Loan Acceptance Prediction for Marketing Campaign Optimization Using Supervised Learning</h3>
+<ul>
+<li>Built a supervised classification model for AllLife Bank using 5,000 customers across 14 features, predicting which liability depositors would accept a personal loan to convert them into higher value asset customers for the bank.</li>
+<li>Engineered a clean pipeline in Python with pandas, NumPy, and scikit-learn, addressing a roughly 9 to 1 class imbalance and dropping the redundant Experience field that correlated almost perfectly with each customer Age value.</li>
+<li>Trained and compared four Decision Tree strategies including a default tree, a pre pruned tree, and two cost complexity post pruned trees, prioritizing recall and F1 over accuracy because of the heavily imbalanced loan target.</li>
+<li>Selected the post pruned Decision Tree as the final model, reaching an F1 score of 88.05 percent and a recall of 85.37 percent on the test set while holding precision between 90 and 94 percent across every candidate model.</li>
+<li>Identified income, education level, and CD account ownership as the strongest drivers, with CD holders accepting at 47 percent, enabling sharper campaign targeting that lifts conversion and reduces the wasted marketing spend.</li>
+</ul>
+<a href="https://github.com/Rohithreddykolanu/Personal-Loan-Acceptance-Prediction-for-Marketing-Campaign-Optimization-Using-Supervised-Learning" class="github-link" target="_blank">
+<i class="fa-brands fa-github"></i> View Project
+</a>
+</div>
+<img src="assets/Projects/Project 7.jpg" alt="Insights into Customer Shopping Behavior">
+</div>
+
+<!-- Card 6: FoodHub Analytics_Restaurant Demand & Delivery Insights -->
+<div class="project-card">
+<div class="project-content">
+<h3 style="color: #ff0000;">FoodHub Analytics_Restaurant Demand & Delivery Insights</h3>
+<ul>
+<li>Analyzed 1,898 FoodHub food delivery orders across 9 attributes including customer, restaurant, cuisine, cost, ratings, and timing, enabling structured exploration of demand and delivery behavior on a clean, tabular dataset in Python.</li>
+<li>Engineered a reproducible EDA pipeline in Python using pandas, NumPy, Matplotlib, and seaborn, including a custom histogram and boxplot utility that profiled distributions, outliers, and skew across all numeric and categorical fields.</li>
+<li>Quantified preparation and delivery performance, surfacing a 27.4 minute average prep time and a weekday delivery of 28.3 versus 22.5 minutes on weekends, with roughly 10.5 percent of orders exceeding the 60 minute service threshold.</li>
+<li>Mapped demand concentration across 8 cuisines and the leading restaurants, ranking American, Japanese, and Italian as top categories and flagging 736 unrated orders as a measurable gap in customer feedback and satisfaction signals.</li>
+<li>Delivered an end to end analytics workflow that converts order level data into actionable KPIs on volume, timing, and ratings, supporting data driven decisions to improve delivery speed, customer experience, and platform revenue.</li>
+</ul>
+<a href="https://github.com/Rohithreddykolanu/FoodHub-Analytics_Restaurant-Demand-Delivery-Insights" class="github-link" target="_blank">
+<i class="fa-brands fa-github"></i> View Project
+</a>
+</div>
+<img src="assets/Projects/Project 6.png" alt="Insights into Customer Shopping Behavior">
+</div>
+
 <!-- Card 5: Insights into Customer Shopping Behavior -->
 <div class="project-card">
 <div class="project-content">
@@ -272,7 +362,7 @@ Hybrid – Hyderabad, India
 <i class="fa-brands fa-github"></i> View Project
 </a>
 </div>
-<img src="assets/Projects/Project 5.jpeg" alt="Insights into Customer Shopping Behavior">
+<img src="assets/Projects/Project 5.jpg" alt="Insights into Customer Shopping Behavior">
 </div>
 
  <!-- Card 4: Loan Default Risk Assessment Using Machine Learning -->
