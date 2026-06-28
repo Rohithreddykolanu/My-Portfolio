@@ -257,6 +257,24 @@ Hybrid – Hyderabad, India
 <h2><i class="fa-solid fa-project-diagram"></i> Projects</h2>
 <div class="project-grid">
 
+<!-- Card 11: MedRAG_Retrieval Augmented Clinical Decision Support Powered by the Merck Manuals -->
+<div class="project-card">
+<div class="project-content">
+<h3 style="color: #ff0000;">MedRAG_Retrieval Augmented Clinical Decision Support Powered by the Merck Manuals</h3>
+<ul>
+<li>Built MedRAG, a clinical decision support assistant over the 4,114 page Merck Manual, pairing dense medical retrieval with a locally hosted Mistral 7B model to answer clinical questions with grounded, source backed responses rather than ungrounded model recall.</li>
+<li>Engineered an end to end RAG pipeline in Python with LangChain, loading the manual through PyMuPDF and splitting it into 8,760 token based chunks at 512 tokens with 50 token overlap using the cl100k_base tokenizer to preserve continuity across boundaries.</li>
+<li>Generated 384 dimensional embeddings for all 8,760 chunks with the all-MiniLM-L6-v2 model and persisted them in a Chroma vector store, then served a similarity retriever returning the top 3 passages sized to fit the 2,300 token context window of the model.</li>
+<li>Ran Mistral 7B through llama.cpp with GPU offloading and built a grounded prompt that injects retrieved context in the instruction format, benchmarking 5 retrieval and sampling configurations across 5 clinical domains to study their effect on answer quality.</li>
+<li>Evaluated outputs on groundedness and relevance, showing that retrieval grounding corrected fabricated drug classes and trade names that the raw model produced, while flagging the self scoring judge as generous and recommending clinician validated benchmarking.</li>
+</ul>
+<a href="https://github.com/Rohithreddykolanu/MedRAG_Retrieval-Augmented-Clinical-Decision-Support-Powered-by-the-Merck-Manuals" class="github-link" target="_blank">
+<i class="fa-brands fa-github"></i> View Project
+</a>
+</div>
+<img src="assets/Projects/Project 11.jpg" alt="Insights into Customer Shopping Behavior">
+</div>
+
 <!-- Card 10: ReneWind_Optimizing Wind Turbine Maintenance Costs Through Neural Network-Based Failure Prediction -->
 <div class="project-card">
 <div class="project-content">
