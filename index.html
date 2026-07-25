@@ -257,6 +257,24 @@ Hybrid – Hyderabad, India
 <h2><i class="fa-solid fa-project-diagram"></i> Projects</h2>
 <div class="project-grid">
 
+<!-- Card 12: Automated Helmet Detection Using CNN Based Image Classification for Workplace Safety -->
+<div class="project-card">
+<div class="project-content">
+<h3 style="color: #ff0000;">Automated Helmet Detection Using CNN Based Image Classification for Workplace Safety</h3>
+<ul>
+<li>Built HelmNet, a computer vision classifier over 4,125 worksite images that flags workers without safety helmets, reaching 91.6% test accuracy and 89.0% recall and converting periodic manual spot checks into continuous automated compliance screening.</li>
+<li>Engineered an end to end TensorFlow pipeline in Python, normalizing 200x200x3 RGB image inputs and building stratified 70/15/15 splits across 2,887 training, 619 validation, and 619 test images to preserve the 3.3 to 1 class imbalance in each partition.</li>
+<li>Designed a custom CNN with 3 convolutional blocks scaling 16 to 64 filters and a 32 neuron dense head, training 369,761 parameters with the Adam optimizer at 0.001 over 20 epochs and cutting the model footprint roughly 40x against VGG16 baselines used.</li>
+<li>Benchmarked the scratch CNN against 3 frozen VGG16 transfer learning variants spanning nearly 15M parameters each, confirming the custom model led all 4 validation metrics and that 20% geometric augmentation dropped validation recall to just 78.5%.</li>
+<li>Evaluated the selected model on a held out test set through confusion matrix analysis, detecting 122 of 145 safety violations at a 6.1% false alarm rate, and recommended threshold tuning, class weighting, and quarterly retraining on production data.</li>
+</ul>
+<a href="https://github.com/Rohithreddykolanu/Automated-Helmet-Detection-Using-CNN-Based-Image-Classification-for-Workplace-Safety" class="github-link" target="_blank">
+<i class="fa-brands fa-github"></i> View Project
+</a>
+</div>
+<img src="assets/Projects/Project 12.png" alt="Automated Helmet Detection">
+</div>
+
 <!-- Card 11: MedRAG_Retrieval Augmented Clinical Decision Support Powered by the Merck Manuals -->
 <div class="project-card">
 <div class="project-content">
@@ -272,7 +290,7 @@ Hybrid – Hyderabad, India
 <i class="fa-brands fa-github"></i> View Project
 </a>
 </div>
-<img src="assets/Projects/Project 11.jpg" alt="Insights into Customer Shopping Behavior">
+<img src="assets/Projects/Project 11.jpg" alt="MedRAG_Retrieval Augmented Clinical Decision Support">
 </div>
 
 <!-- Card 10: ReneWind_Optimizing Wind Turbine Maintenance Costs Through Neural Network-Based Failure Prediction -->
@@ -290,7 +308,7 @@ Hybrid – Hyderabad, India
 <i class="fa-brands fa-github"></i> View Project
 </a>
 </div>
-<img src="assets/Projects/Project 10.jpg" alt="Insights into Customer Shopping Behavior">
+<img src="assets/Projects/Project 10.jpg" alt="ReneWind_Optimizing Wind Turbine Maintenance Costs Through Neural Network-Based Failure Prediction">
 </div>
 
 <!-- Card 9: Airbnb Price Prediction, Guest Sentiment Analysis & Topic Modeling using ML & NLP -->
@@ -308,7 +326,7 @@ Hybrid – Hyderabad, India
 <i class="fa-brands fa-github"></i> View Project
 </a>
 </div>
-<img src="assets/Projects/Project 9.jpg" alt="Insights into Customer Shopping Behavior">
+<img src="assets/Projects/Project 9.jpg" alt="Airbnb Price Prediction, Guest Sentiment Analysis & Topic Modeling using ML & NLP">
 </div>
 
 <!-- Card 8: EasyVisa_Predicting Visa Approval Outcomes Using Advanced Machine Learning Techniques -->
@@ -326,7 +344,7 @@ Hybrid – Hyderabad, India
 <i class="fa-brands fa-github"></i> View Project
 </a>
 </div>
-<img src="assets/Projects/Project 8.jpg" alt="Insights into Customer Shopping Behavior">
+<img src="assets/Projects/Project 8.jpg" alt="EasyVisa_Predicting Visa Approval Outcomes Using Advanced Machine Learning Techniques">
 </div>
 
 <!-- Card 7: Personal Loan Acceptance Prediction for Marketing Campaign Optimization Using Supervised Learning -->
@@ -344,7 +362,7 @@ Hybrid – Hyderabad, India
 <i class="fa-brands fa-github"></i> View Project
 </a>
 </div>
-<img src="assets/Projects/Project 7.jpg" alt="Insights into Customer Shopping Behavior">
+<img src="assets/Projects/Project 7.jpg" alt="Personal Loan Acceptance Prediction">
 </div>
 
 <!-- Card 6: FoodHub Analytics_Restaurant Demand & Delivery Insights -->
@@ -362,7 +380,7 @@ Hybrid – Hyderabad, India
 <i class="fa-brands fa-github"></i> View Project
 </a>
 </div>
-<img src="assets/Projects/Project 6.png" alt="Insights into Customer Shopping Behavior">
+<img src="assets/Projects/Project 6.png" alt="FoodHub Analytics_Restaurant Demand & Delivery Insights">
 </div>
 
 <!-- Card 5: Insights into Customer Shopping Behavior -->
