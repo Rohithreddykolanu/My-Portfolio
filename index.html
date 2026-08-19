@@ -257,6 +257,24 @@ Hybrid – Hyderabad, India
 <h2><i class="fa-solid fa-project-diagram"></i> Projects</h2>
 <div class="project-grid">
 
+<!-- Card 13: SuperKart Sales Revenue Forecasting_End to End Predictive Modeling and Deployment -->
+<div class="project-card">
+<div class="project-content">
+<h3 style="color: #ff0000;">SuperKart Sales Revenue Forecasting_End to End Predictive Modeling and Deployment</h3>
+<ul>
+<li>Built SuperKart, an end to end sales revenue forecasting system across 4 retail outlets spanning 3 city tiers and 4 store formats, reaching 0.677 test R² with a 17.1% MAPE and converting quarterly procurement planning from judgement based estimates into a queryable prediction service.</li>
+<li>Engineered a production scikit-learn pipeline in Python, chaining one hot encoding of 7 categorical fields with 4 numerical passthroughs and 3 derived features, extracting product prefix codes, converting establishment year into store age, and consolidating 16 product types into a binary perishability flag.</li>
+<li>Benchmarked 12 model configurations across 6 regression families spanning bagging and boosting approaches, tuning each through GridSearchCV cross validation and lifting AdaBoost test R² from 0.653 to 0.675 while establishing that all families converged within 0.003 of a shared accuracy ceiling.</li>
+<li>Selected a tuned Gradient Boosting Regressor delivering 605.64 RMSE and 475.71 MAE with a 0.004 train to test R² gap, choosing it over a statistically equivalent XGBoost variant to eliminate an external dependency and cut the serialized artifact to 126 kB for faster container cold starts.</li>
+<li>Deployed the serialized pipeline as a containerized Flask REST API served by Gunicorn with 4 workers, paired with a Streamlit interface over an 11 field JSON contract on Hugging Face Spaces, and recommended MAPE drift thresholds, quarterly retraining, and endpoint authentication for production rollout.</li>
+</ul>
+<a href="https://github.com/Rohithreddykolanu/SuperKart-Sales-Revenue-Forecasting_End-to-End-Predictive-Modeling-and-Deployment" class="github-link" target="_blank">
+<i class="fa-brands fa-github"></i> View Project
+</a>
+</div>
+<img src="assets/Projects/Project 13.png" alt="SuperKart Sales Revenue Forecasting">
+</div>
+
 <!-- Card 12: Automated Helmet Detection Using CNN Based Image Classification for Workplace Safety -->
 <div class="project-card">
 <div class="project-content">
